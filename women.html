@@ -23,8 +23,18 @@
     <header>
         <nav>
             <div class="container">
-                <a class="logo" href="#"><img src="assets/image/logo.png" alt="" /></a>
+                <input type="checkbox" id="open_menu" />
+                <div class="show_menu">
+                    <label for="open_menu"><i class="fas fa-bars"></i></label>
+                </div>
 
+                <a class="logo" href="#">
+                    <img src="assets/image/logo2.png" alt="" />
+                </a>
+
+                <a href="#" class="mobile_logo">
+                    <img src="assets/image/favicon.png" alt="" />
+                </a>
 
                 <ul class="menu me-auto list-unstyled d-flex my-0">
                     <li><a href="#">Vecton Study</a></li>
@@ -33,14 +43,68 @@
                     <li><a href="#">Find Supplies</a></li>
                 </ul>
 
-
                 <!-- sign up and log in  -->
                 <div class="sign_btn">
-
-                    <a class="sign_up" href="#">Sign up</a>
+                    <a class="sign_up" href="#">Say Hi</a>
                     <a class="log_in" href="#">Log in</a>
-
                 </div>
+
+                <div class="create_account">
+                    <a class="close_btn" href="#"><i class="fas fa-times"></i></a>
+
+                    <div class="content_box">
+                        <div class="continue">
+                            <p>Continue with</p>
+                            <div class="icon_box">
+                                <a href="#"> <i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#"> <i class="fab fa-twitter"></i></a>
+                                <a href="#"> <i class="fab fa-instagram"></i></a>
+                                <a href="#"> <i class="fab fa-pinterest"></i></a>
+                                <a href="#"> <i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="account_form">
+                            <p>Create an account</p>
+
+                            <form action="/">
+                                <input type="email" placeholder="E-mail" />
+                                <input type="password" placeholder="Password" />
+                                <input type="password" placeholder="Confirm Password" />
+                                <input type="submit" value="Continue" />
+                            </form>
+                        </div>
+
+                        <div class="login_link">
+                            <span>Allready you have an account?</span>
+                            <a href="#">Log in</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login_form">
+                    <a class="close_log_btn" href="#"><i class="fas fa-times"></i></a>
+
+                    <div class="content_box">
+                        <div class="account_form">
+                            <p>Sign in</p>
+    
+                            <form action="/">
+                                <input type="email" placeholder="E-mail" />
+                                <input type="password" placeholder="Password" />
+                                <input type="submit" value="Sign in" />
+                            </form>
+                        </div>
+    
+                        <div class="link_box">
+                            <a href="#" class="d-block text-center">Forgot your password?</a>
+                            <a href="#" class="d-block text-center">Create an Account</a>
+                        </div>
+                    </div>
+                </div>
+
+
 
 
                 <!-- <div class="nav_content">
@@ -60,7 +124,6 @@
                 </div> -->
             </div>
         </nav>
-
     </header>
     
     <!-- filter button  -->
@@ -144,10 +207,10 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center g-4" id="product-list">
+            <div class="product_list" id="product-list">
 
 
-                <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-6 women">
+                <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
                             <img src="assets/image/product_1.png" class="img-fluid d-block mx-auto w-100">
@@ -172,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-6 women">
+                <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
                             <img src="assets/image/product_2.png" class="img-fluid d-block mx-auto w-100">
@@ -197,7 +260,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-6 men">
+                <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
                             <img src="assets/image/product_1.png" class="img-fluid d-block mx-auto w-100">
@@ -222,7 +285,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-6 men">
+                <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
                             <img src="assets/image/product_2.png" class="img-fluid d-block mx-auto w-100">
@@ -247,7 +310,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-6 kid">
+                <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
                             <img src="assets/image/product_1.png" class="img-fluid d-block mx-auto w-100">
@@ -272,7 +335,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-6 kid">
+                <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
                             <img src="assets/image/product_2.png" class="img-fluid d-block mx-auto w-100">
@@ -297,7 +360,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-6 boy">
+                <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
                             <img src="assets/image/product_1.png" class="img-fluid d-block mx-auto w-100">
@@ -322,7 +385,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-6 boy">
+                <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
                             <img src="assets/image/product_2.png" class="img-fluid d-block mx-auto w-100">
@@ -347,7 +410,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-6 other">
+                <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
                             <img src="assets/image/product_1.png" class="img-fluid d-block mx-auto w-100">
