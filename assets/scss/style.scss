@@ -20,6 +20,8 @@ $bold_font: calibriBold;
 
 body {
   position: relative;
+  width: 100vw;
+  overflow-x: hidden;
 }
 img {
   max-width: 100%;
@@ -125,7 +127,7 @@ header {
 
       .create_account {
         position: absolute;
-        top: 120%;
+        top: 150%;
         left: 50%;
         transform: translateX(-50%) scale(1.1);
         background-color: rgba($color: #000000, $alpha: 0.5);
@@ -301,7 +303,7 @@ header {
 
       .login_form {
         position: absolute;
-        top: 120%;
+        top: 150%;
         right: 10%;
         transform: scale(1.1);
         background-color: rgba($color: #000000, $alpha: 0.5);
@@ -457,18 +459,37 @@ header {
   position: absolute;
   top: 100px;
   left: 0;
-  z-index: 100;
   width: 100%;
-  z-index: 20;
+  z-index: 101;
+  #check_filter {
+    display: none;
+  }
 
-  .filter {
-    a {
+  #check_filter:checked ~ .filter_content {
+    right: 0px;
+  }
+
+  #check_filter:checked ~ label .open {
+    margin-right: 90px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  #check_filter:checked ~ label .close_filter {
+    right: 260px;
+  }
+
+
+    
+  label {
+    .open {
       font-size: 20px;
-      line-height: 42px;
       color: #ffffff;
       text-decoration: none;
       border: 1px solid #fff;
       padding: 2px 15px;
+      margin: 0;
+      transition: .3s ease-in-out;
 
       &:hover {
         background-color: $primary_color;
@@ -483,6 +504,131 @@ header {
         margin-right: 10px;
         border-right: 1px solid #fff;
         padding-right: 3px;
+      }
+    }
+
+
+    .close_filter {
+      position: absolute;
+      font-size: 30px;
+      top: -125px;
+      z-index: 100;
+      right: -30px;
+      cursor: pointer;
+      transition: .3s ease-in-out;
+    }
+  }
+
+
+
+
+  
+
+
+  .filter_content {
+    background-color: #cccccc;
+    position: absolute;
+    width: 300px;
+    min-height: 100vh;
+    top: -130px;
+    right: -310px;
+    border-radius: 0 0 0 10px;
+    transition: all .3s ease-in-out;
+
+    .filter_head {
+      background-color: #fff;
+      padding: 5px 20px;
+      span {
+        font-size: 23px;
+        font-family: $bold_font;
+        color: #222;
+        padding-left: 15px;
+        position: relative;
+
+        &::before {
+          content: "";
+          height: 60%;
+          width: 1px;
+          background-color: #222;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+        }
+      }
+    }
+
+    .filter_body {
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 300px;
+      padding-right: 15px;
+      .first_items, .license, .find_trend {
+
+        h4 {
+          color: #222;
+          font-size: 20px;
+          font-family: $bold_font;
+          position: relative;
+          padding-bottom: 5px;
+          margin-bottom: 15px;
+
+          &::before {
+            content: "";
+            width: 40%;
+            height: 2px;
+            background: linear-gradient(90deg, #cccccc, $primary_color, #cccccc);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+          }
+        }
+        
+        .custom-checkbox {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+        }
+  
+        .custom-checkbox .label {
+          font-size: 16;
+          margin: 0 10px;
+        }
+  
+        .custom-checkbox .checkmark {
+          width: 17px;
+          height: 17px;
+          display: inline-block;
+          border-radius: 3px;
+          background: $primary_color url(../image/ckecked.png) center/1250%
+            no-repeat;
+          transition: background-size 0.2s ease;
+        }
+  
+        .custom-checkbox input:checked + .checkmark {
+          background-size: 60%;
+          transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
+        }
+  
+        .custom-checkbox input {
+          display: none;
+        }
+      }
+
+
+      .find_trend {
+
+        .trend_content {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+
+          .trend_item {
+            margin-right: 10px;
+          }
+        }
       }
     }
   }
@@ -526,9 +672,6 @@ header {
   }
 
   .search_container {
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
@@ -536,6 +679,22 @@ header {
     border-radius: 20px;
     width: 100%;
     z-index: 1 !important;
+
+    &.search_absolute {
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+    }
+
+    &.search_scrolled {
+      position: fixed;
+      top: 0;
+      transform: translateX(0);
+      padding: 15px 0;
+      border-radius: 10px;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+    }
+
     form {
       .nice-select {
         color: #fff;
@@ -928,21 +1087,15 @@ header {
   }
 }
 
-
-
-
 // media
 
 @media all and (max-width: 1600px) {
   .product {
-
     .product_list {
       columns: 3;
     }
   }
 }
-
-
 
 @media all and (max-width: 1110px) {
   header {
@@ -1192,9 +1345,7 @@ header {
     }
   }
 
-
   .product {
-
     .product_list {
       columns: 2;
     }
@@ -1299,20 +1450,15 @@ header {
         }
       }
     }
-
-    
   }
 }
 
-@media all and (max-width: 580px)  {
-
+@media all and (max-width: 580px) {
   .product {
-
     .product_list {
       columns: 1;
     }
   }
-
 }
 
 @media all and (max-width: 480px) {

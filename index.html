@@ -97,14 +97,14 @@
                     <div class="content_box">
                         <div class="account_form">
                             <p>Sign in</p>
-    
+
                             <form action="/">
                                 <input type="email" placeholder="E-mail" />
                                 <input type="password" placeholder="Password" />
                                 <input type="submit" value="Sign in" />
                             </form>
                         </div>
-    
+
                         <div class="link_box">
                             <a href="#" class="d-block text-center">Forgot your password?</a>
                             <a href="#" class="d-block text-center">Create an Account</a>
@@ -134,14 +134,215 @@
         </nav>
     </header>
 
-    <!-- filter button  -->
+    <!-- filter button starts -->
     <div class="filter_container">
-        <div class="container">
-            <div class="filter text-end">
-                <a href="#"> <i class="fas fa-sliders-h"></i> Filter</a>
+        <div class="container text-end">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <input type="checkbox" id="check_filter">
+
+                    <label for="check_filter">
+                            <p class="open"> <i class="fas fa-sliders-h"></i> Filter</p>
+                            <i class="fas fa-times close_filter"></i>
+                    </label>
+
+                    <div class="filter_content">
+                        <div class="filter_head text-end">
+                            <span>Filters</span>
+                        </div>
+
+                        <div class="filter_body">
+                            <form action="/">
+                                <div class="first_items text-start">
+
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">All</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Vectors</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Photos</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">PSD</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">PNG</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">CLO</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">DST</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">MP3</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Video</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div class="license">
+                                    <h4 class="text-center mt-3">License</h4>
+
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">All</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Free Design</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Premium Design</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Exlusive</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div class="find_trend">
+                                    <h4 class="text-center mt-3">Find trend</h4>
+
+                                    <div class="trend_content mt-3">
+                                        <div class="trend_item text-start">
+                                            <h5>Season</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="all">All</option>
+                                                <option value="ss">SS</option>
+                                                <option value="aw">AW</option>
+                                                <option value="eid">Eid ul fitr</option>
+                                                <option value="newyear">New year</option>
+                                                <option value="boishakh">Pohela boihsakh</option>
+                                            </select>
+                                        </div>
+                                        <div class="trend_item text-start">
+                                            <h5>Year</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="all">All</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="trend_content mt-3">
+                                        <div class="trend_item text-start">
+                                            <h5>Department</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="All">All</option>
+                                                <option value="Women">Women's</option>
+                                                <option value="man">man's</option>
+                                                <option value="Kid">Kid</option>
+                                                <option value="Boys">Boys</option>
+                                                <option value="Accessories">Accessories</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="trend_item text-start">
+                                            <h5>Group</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="all">All</option>
+                                                <option value="tunic">tunic tops</option>
+                                                <option value="kameez">kameez</option>
+                                                <option value="palazzo">palazzo</option>
+                                                <option value="pant">pant</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="trend_content mt-3">
+                                        <div class="trend_item text-start">
+                                            <h5>Major</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="all">All</option>
+                                                <option value="Mood">Mood board</option>
+                                                <option value="Color">Color trend</option>
+                                                <option value="Print">Print & Pattern</option>
+                                                <option value="Flat">Flat sketch</option>
+                                                <option value="Accessories">Accessories</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="trend_item text-start">
+                                            <h5>Country</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="Bangladesh">Bangladesh</option>
+                                                <option value="India">India</option>
+                                                <option value="Pakistan">Pakistan</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
+    <!-- filter button ends -->
 
     <!-- trigger section starts  -->
 
@@ -165,7 +366,7 @@
             </div>
         </div>
 
-        <div class="search_container">
+        <div class="search_container search_absolute">
             <form action="/">
                 <select>
                     <option value="all">All Products</option>
@@ -441,6 +642,8 @@
     <!-- footer section starts  -->
 
     <footer class="footer">
+
+        <!-- footer top -->
         <div class="footer_top py-5">
             <div class="container">
                 <div class="row">

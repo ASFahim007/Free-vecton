@@ -26,6 +26,28 @@ $(document).ready(function () {
     })
     
 });
+// sticky searc bar
+const header = document.querySelector(".search_container");
+const sectionOne = document.querySelector(".banner");
+const sectionOneOptions = {
+  rootMargin: "-10% 0px 0px 0px"
+};
+const sectionOneObserver = new IntersectionObserver(function(
+  entries,
+  sectionOneObserver
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      header.classList.add("search_scrolled");
+      header.classList.remove("search_absolute");
+    } else {
+      header.classList.remove("search_scrolled");
+      header.classList.add("search_absolute");
+    }
+  });
+},
+sectionOneOptions);
+sectionOneObserver.observe(sectionOne);
 
 
 
