@@ -18,6 +18,8 @@
 
 body {
   position: relative;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 img {
@@ -130,7 +132,7 @@ header nav .container .sign_btn a.log_in:hover {
 
 header nav .container .create_account {
   position: absolute;
-  top: 120%;
+  top: 150%;
   left: 50%;
   -webkit-transform: translateX(-50%) scale(1.1);
           transform: translateX(-50%) scale(1.1);
@@ -300,7 +302,7 @@ header nav .container .create_account .content_box .login_link a {
 
 header nav .container .login_form {
   position: absolute;
-  top: 120%;
+  top: 150%;
   right: 10%;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -465,34 +467,179 @@ header nav .container .nav_lang .nice-select ul li {
   position: absolute;
   top: 100px;
   left: 0;
-  z-index: 100;
   width: 100%;
-  z-index: 20;
+  z-index: 101;
 }
 
-.filter_container .filter a {
+.filter_container #check_filter {
+  display: none;
+}
+
+.filter_container #check_filter:checked ~ .filter_content {
+  right: 0px;
+}
+
+.filter_container #check_filter:checked ~ label .open {
+  margin-right: 90px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.filter_container #check_filter:checked ~ label .close_filter {
+  right: 260px;
+}
+
+.filter_container label .open {
   font-size: 20px;
-  line-height: 42px;
   color: #ffffff;
   text-decoration: none;
   border: 1px solid #fff;
   padding: 2px 15px;
+  margin: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
-.filter_container .filter a:hover {
+.filter_container label .open:hover {
   background-color: #da1c5c;
 }
 
-.filter_container .filter a:hover i {
+.filter_container label .open:hover i {
   color: #fff;
 }
 
-.filter_container .filter a i {
+.filter_container label .open i {
   color: #da1c5c;
   font-size: 20px;
   margin-right: 10px;
   border-right: 1px solid #fff;
   padding-right: 3px;
+}
+
+.filter_container label .close_filter {
+  position: absolute;
+  font-size: 30px;
+  top: -125px;
+  z-index: 100;
+  right: -30px;
+  cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.filter_container .filter_content {
+  background-color: #cccccc;
+  position: absolute;
+  width: 300px;
+  min-height: 100vh;
+  top: -130px;
+  right: -310px;
+  border-radius: 0 0 0 10px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.filter_container .filter_content .filter_head {
+  background-color: #fff;
+  padding: 5px 20px;
+}
+
+.filter_container .filter_content .filter_head span {
+  font-size: 23px;
+  font-family: calibriBold;
+  color: #222;
+  padding-left: 15px;
+  position: relative;
+}
+
+.filter_container .filter_content .filter_head span::before {
+  content: "";
+  height: 60%;
+  width: 1px;
+  background-color: #222;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+
+.filter_container .filter_content .filter_body {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 300px;
+  padding-right: 15px;
+}
+
+.filter_container .filter_content .filter_body .first_items h4, .filter_container .filter_content .filter_body .license h4, .filter_container .filter_content .filter_body .find_trend h4 {
+  color: #222;
+  font-size: 20px;
+  font-family: calibriBold;
+  position: relative;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.filter_container .filter_content .filter_body .first_items h4::before, .filter_container .filter_content .filter_body .license h4::before, .filter_container .filter_content .filter_body .find_trend h4::before {
+  content: "";
+  width: 40%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#cccccc), color-stop(#da1c5c), to(#cccccc));
+  background: linear-gradient(90deg, #cccccc, #da1c5c, #cccccc);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.filter_container .filter_content .filter_body .first_items .custom-checkbox, .filter_container .filter_content .filter_body .license .custom-checkbox, .filter_container .filter_content .filter_body .find_trend .custom-checkbox {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter_container .filter_content .filter_body .first_items .custom-checkbox .label, .filter_container .filter_content .filter_body .license .custom-checkbox .label, .filter_container .filter_content .filter_body .find_trend .custom-checkbox .label {
+  font-size: 16;
+  margin: 0 10px;
+}
+
+.filter_container .filter_content .filter_body .first_items .custom-checkbox .checkmark, .filter_container .filter_content .filter_body .license .custom-checkbox .checkmark, .filter_container .filter_content .filter_body .find_trend .custom-checkbox .checkmark {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  border-radius: 3px;
+  background: #da1c5c url(../image/ckecked.png) center/1250% no-repeat;
+  -webkit-transition: background-size 0.2s ease;
+  transition: background-size 0.2s ease;
+}
+
+.filter_container .filter_content .filter_body .first_items .custom-checkbox input:checked + .checkmark, .filter_container .filter_content .filter_body .license .custom-checkbox input:checked + .checkmark, .filter_container .filter_content .filter_body .find_trend .custom-checkbox input:checked + .checkmark {
+  background-size: 60%;
+  -webkit-transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
+  transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
+}
+
+.filter_container .filter_content .filter_body .first_items .custom-checkbox input, .filter_container .filter_content .filter_body .license .custom-checkbox input, .filter_container .filter_content .filter_body .find_trend .custom-checkbox input {
+  display: none;
+}
+
+.filter_container .filter_content .filter_body .find_trend .trend_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.filter_container .filter_content .filter_body .find_trend .trend_content .trend_item {
+  margin-right: 10px;
 }
 
 .trigger {
@@ -535,9 +682,6 @@ header nav .container .nav_lang .nice-select ul li {
 }
 
 .banner .search_container {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   display: -webkit-box;
@@ -552,6 +696,22 @@ header nav .container .nav_lang .nice-select ul li {
   border-radius: 20px;
   width: 100%;
   z-index: 1 !important;
+}
+
+.banner .search_container.search_absolute {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+}
+
+.banner .search_container.search_scrolled {
+  position: fixed;
+  top: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  padding: 15px 0;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .banner .search_container form .nice-select {
