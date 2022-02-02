@@ -7,13 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freevecton | Free Vector , Free PSD, Free Photos, Free Illustrations</title>
 
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/image/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/image/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/image/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/image/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
     <!-- css links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
     <link rel="stylesheet" href="assets/scss/nice-select.css" />
-
     <link rel="stylesheet" href="assets/scss/owl.carousel.min.css">
-
     <link rel="stylesheet" href="assets/scss/bootstrap.min.css" />
     <!-- main css -->
     <link rel="stylesheet" href="assets/scss/style.css" />
@@ -126,14 +133,219 @@
         </nav>
     </header>
     
-    <!-- filter button  -->
+    <!-- filter button starts -->
     <div class="filter_container">
-        <div class="container">
-            <div class="filter text-end">
-                <a href="#"> <i class="fas fa-sliders-h"></i> Filter</a>
+        <div class="container text-end">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <input type="checkbox" id="check_filter">
+
+                    <label for="check_filter">
+                            <p class="open"> <i class="fas fa-sliders-h"></i> Filter</p>
+                            <i class="fas fa-times close_filter"></i>
+                    </label>
+
+                    <div class="filter_content">
+                        <div class="filter_head text-end">
+                            <span>Filters</span>
+                        </div>
+
+                        <div class="filter_body">
+                            <form action="/">
+                                <div class="first_items text-start">
+
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">All</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Vectors</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Photos</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">PSD</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">PNG</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">CLO</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">DST</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">MP3</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Video</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div class="license">
+                                    <h4 class="text-center mt-3">License</h4>
+
+                                    <div>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">All</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Free Design</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Premium Design</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="label">Exlusive</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div class="find_trend">
+                                    <h4 class="text-center mt-3">Find trend</h4>
+
+                                    <div class="trend_content mt-3">
+                                        <div class="trend_item text-start">
+                                            <h5>Season</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="all">All</option>
+                                                <option value="ss">SS</option>
+                                                <option value="aw">AW</option>
+                                                <option value="eid">Eid ul fitr</option>
+                                                <option value="newyear">New year</option>
+                                                <option value="boishakh">Pohela boihsakh</option>
+                                            </select>
+                                        </div>
+                                        <div class="trend_item text-start">
+                                            <h5>Year</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="all">All</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="trend_content mt-3">
+                                        <div class="trend_item text-start">
+                                            <h5>Department</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="All">All</option>
+                                                <option value="Women">Women's</option>
+                                                <option value="man">man's</option>
+                                                <option value="Kid">Kid</option>
+                                                <option value="Boys">Boys</option>
+                                                <option value="Accessories">Accessories</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="trend_item text-start">
+                                            <h5>Group</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="all">All</option>
+                                                <option value="tunic">tunic tops</option>
+                                                <option value="kameez">kameez</option>
+                                                <option value="palazzo">palazzo</option>
+                                                <option value="pant">pant</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="trend_content mt-3">
+                                        <div class="trend_item text-start">
+                                            <h5>Major</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="all">All</option>
+                                                <option value="Mood">Mood board</option>
+                                                <option value="Color">Color trend</option>
+                                                <option value="Print">Print & Pattern</option>
+                                                <option value="Flat">Flat sketch</option>
+                                                <option value="Accessories">Accessories</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="trend_item text-start">
+                                            <h5>Country</h5>
+                                            <select>
+                                                <option value="" selected>Select</option>
+                                                <option value="Bangladesh">Bangladesh</option>
+                                                <option value="India">India</option>
+                                                <option value="Pakistan">Pakistan</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="filter_btn text-center">
+                                    <input type="submit" value="Filter">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
+    <!-- filter button ends -->
 
     <!-- trigger section starts  -->
 
@@ -146,7 +358,7 @@
 
     <!-- banner secition starts -->
 
-    <section class="banner">
+    <div class="banner">
         <div class="banner_slider">
             <div class="owl-carousel owl-theme">
                 <div class="item">
@@ -185,7 +397,7 @@
 
         </div>
 
-    </section>
+    </div>
 
     <!-- banner secition ends -->
 
@@ -195,31 +407,29 @@
     <!-- products sectio starts -->
 
     <div class="product">
-
         <div class="container-fluid">
-
-            <div class="row mt-3 mb-4 button-group filter-button-group">
+            <div class="row mt-3 mb-4">
                 <div class="col category_menu d-flex justify-content-center flex-wrap">
-                    <a href="#" >All</a>
-                    <a href="#">tunic tops</a>
-                    <a href="#">kameez</a>
-                    <a href="#">plazzo pant</a>
+                    <a href="#">All</a>
+                    <a href="women.html" target="_blenk">women</a>
+                    <a href="#">men</a>
+                    <a href="#">kid</a>
+                    <a href="#">boy</a>
+                    <a href="#">other</a>
                 </div>
             </div>
 
-            <div class="product_list" id="product-list">
-
-
+            <div class="product_list px-4" id="product-list">
                 <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
-                            <img src="assets/image/product_1.png" class="img-fluid d-block mx-auto w-100">
+                            <img src="assets/image/textproduct10.jpg" class="img-fluid d-block mx-auto w-100" />
                         </div>
 
                         <div class="info_box">
                             <span>Salwar kameez design for ready to print, tunic tops ...</span>
                             <div class="img_box">
-                                <img src="assets/image/Profile image.png" alt="">
+                                <img src="assets/image/Profile image.png" alt="" />
                                 <span>Vecton</span>
                             </div>
                         </div>
@@ -238,13 +448,13 @@
                 <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
-                            <img src="assets/image/product_2.png" class="img-fluid d-block mx-auto w-100">
+                            <img src="assets/image/textproduct12.jpg" class="img-fluid d-block mx-auto w-100" />
                         </div>
 
                         <div class="info_box">
                             <span>Salwar kameez design for ready to print, tunic tops ...</span>
                             <div class="img_box">
-                                <img src="assets/image/Profile image.png" alt="">
+                                <img src="assets/image/Profile image.png" alt="" />
                                 <span>Vecton</span>
                             </div>
                         </div>
@@ -263,13 +473,13 @@
                 <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
-                            <img src="assets/image/product_1.png" class="img-fluid d-block mx-auto w-100">
+                            <img src="assets/image/textproduct19.jpg" class="img-fluid d-block mx-auto w-100" />
                         </div>
 
                         <div class="info_box">
                             <span>Salwar kameez design for ready to print, tunic tops ...</span>
                             <div class="img_box">
-                                <img src="assets/image/Profile image.png" alt="">
+                                <img src="assets/image/Profile image.png" alt="" />
                                 <span>Vecton</span>
                             </div>
                         </div>
@@ -288,13 +498,13 @@
                 <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
-                            <img src="assets/image/product_2.png" class="img-fluid d-block mx-auto w-100">
+                            <img src="assets/image/textproduct14.jpg" class="img-fluid d-block mx-auto w-100" />
                         </div>
 
                         <div class="info_box">
                             <span>Salwar kameez design for ready to print, tunic tops ...</span>
                             <div class="img_box">
-                                <img src="assets/image/Profile image.png" alt="">
+                                <img src="assets/image/Profile image.png" alt="" />
                                 <span>Vecton</span>
                             </div>
                         </div>
@@ -313,13 +523,13 @@
                 <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
-                            <img src="assets/image/product_1.png" class="img-fluid d-block mx-auto w-100">
+                            <img src="assets/image/textproduct15.jpg" class="img-fluid d-block mx-auto w-100" />
                         </div>
 
                         <div class="info_box">
                             <span>Salwar kameez design for ready to print, tunic tops ...</span>
                             <div class="img_box">
-                                <img src="assets/image/Profile image.png" alt="">
+                                <img src="assets/image/Profile image.png" alt="" />
                                 <span>Vecton</span>
                             </div>
                         </div>
@@ -338,13 +548,13 @@
                 <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
-                            <img src="assets/image/product_2.png" class="img-fluid d-block mx-auto w-100">
+                            <img src="assets/image/textproduct16.jpg" class="img-fluid d-block mx-auto w-100" />
                         </div>
 
                         <div class="info_box">
                             <span>Salwar kameez design for ready to print, tunic tops ...</span>
                             <div class="img_box">
-                                <img src="assets/image/Profile image.png" alt="">
+                                <img src="assets/image/Profile image.png" alt="" />
                                 <span>Vecton</span>
                             </div>
                         </div>
@@ -363,13 +573,13 @@
                 <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
-                            <img src="assets/image/product_1.png" class="img-fluid d-block mx-auto w-100">
+                            <img src="assets/image/textproduct17.jpg" class="img-fluid d-block mx-auto w-100" />
                         </div>
 
                         <div class="info_box">
                             <span>Salwar kameez design for ready to print, tunic tops ...</span>
                             <div class="img_box">
-                                <img src="assets/image/Profile image.png" alt="">
+                                <img src="assets/image/Profile image.png" alt="" />
                                 <span>Vecton</span>
                             </div>
                         </div>
@@ -388,13 +598,13 @@
                 <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
-                            <img src="assets/image/product_2.png" class="img-fluid d-block mx-auto w-100">
+                            <img src="assets/image/textproduct11.jpg" class="img-fluid d-block mx-auto w-100" />
                         </div>
 
                         <div class="info_box">
                             <span>Salwar kameez design for ready to print, tunic tops ...</span>
                             <div class="img_box">
-                                <img src="assets/image/Profile image.png" alt="">
+                                <img src="assets/image/Profile image.png" alt="" />
                                 <span>Vecton</span>
                             </div>
                         </div>
@@ -413,13 +623,13 @@
                 <div class="product_box">
                     <div class="product-item">
                         <div class="product-img">
-                            <img src="assets/image/product_1.png" class="img-fluid d-block mx-auto w-100">
+                            <img src="assets/image/textproduct18.jpg" class="img-fluid d-block mx-auto w-100" />
                         </div>
 
                         <div class="info_box">
                             <span>Salwar kameez design for ready to print, tunic tops ...</span>
                             <div class="img_box">
-                                <img src="assets/image/Profile image.png" alt="">
+                                <img src="assets/image/Profile image.png" alt="" />
                                 <span>Vecton</span>
                             </div>
                         </div>
@@ -435,13 +645,158 @@
                         </div>
                     </div>
                 </div>
+                <div class="product_box">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="assets/image/textproduct10.jpg" class="img-fluid d-block mx-auto w-100" />
+                        </div>
 
+                        <div class="info_box">
+                            <span>Salwar kameez design for ready to print, tunic tops ...</span>
+                            <div class="img_box">
+                                <img src="assets/image/Profile image.png" alt="" />
+                                <span>Vecton</span>
+                            </div>
+                        </div>
 
+                        <div class="icon_box">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-share-alt"></i>
+                            <i class="fas fa-plus"></i>
+                            <i class="fab fa-pinterest-p"></i>
 
+                            <span> <i class="fas fa-heart"></i> 56k</span>
+                            <span> <i class="fas fa-long-arrow-alt-down"></i> 545k</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_box">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="assets/image/textproduct17.jpg" class="img-fluid d-block mx-auto w-100" />
+                        </div>
+
+                        <div class="info_box">
+                            <span>Salwar kameez design for ready to print, tunic tops ...</span>
+                            <div class="img_box">
+                                <img src="assets/image/Profile image.png" alt="" />
+                                <span>Vecton</span>
+                            </div>
+                        </div>
+
+                        <div class="icon_box">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-share-alt"></i>
+                            <i class="fas fa-plus"></i>
+                            <i class="fab fa-pinterest-p"></i>
+
+                            <span> <i class="fas fa-heart"></i> 56k</span>
+                            <span> <i class="fas fa-long-arrow-alt-down"></i> 545k</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_box">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="assets/image/textproduct15.jpg" class="img-fluid d-block mx-auto w-100" />
+                        </div>
+
+                        <div class="info_box">
+                            <span>Salwar kameez design for ready to print, tunic tops ...</span>
+                            <div class="img_box">
+                                <img src="assets/image/Profile image.png" alt="" />
+                                <span>Vecton</span>
+                            </div>
+                        </div>
+
+                        <div class="icon_box">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-share-alt"></i>
+                            <i class="fas fa-plus"></i>
+                            <i class="fab fa-pinterest-p"></i>
+
+                            <span> <i class="fas fa-heart"></i> 56k</span>
+                            <span> <i class="fas fa-long-arrow-alt-down"></i> 545k</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_box">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="assets/image/textproduct14.jpg" class="img-fluid d-block mx-auto w-100" />
+                        </div>
+
+                        <div class="info_box">
+                            <span>Salwar kameez design for ready to print, tunic tops ...</span>
+                            <div class="img_box">
+                                <img src="assets/image/Profile image.png" alt="" />
+                                <span>Vecton</span>
+                            </div>
+                        </div>
+
+                        <div class="icon_box">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-share-alt"></i>
+                            <i class="fas fa-plus"></i>
+                            <i class="fab fa-pinterest-p"></i>
+
+                            <span> <i class="fas fa-heart"></i> 56k</span>
+                            <span> <i class="fas fa-long-arrow-alt-down"></i> 545k</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_box">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="assets/image/textproduct12.jpg" class="img-fluid d-block mx-auto w-100" />
+                        </div>
+
+                        <div class="info_box">
+                            <span>Salwar kameez design for ready to print, tunic tops ...</span>
+                            <div class="img_box">
+                                <img src="assets/image/Profile image.png" alt="" />
+                                <span>Vecton</span>
+                            </div>
+                        </div>
+
+                        <div class="icon_box">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-share-alt"></i>
+                            <i class="fas fa-plus"></i>
+                            <i class="fab fa-pinterest-p"></i>
+
+                            <span> <i class="fas fa-heart"></i> 56k</span>
+                            <span> <i class="fas fa-long-arrow-alt-down"></i> 545k</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_box">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="assets/image/textproduct16.jpg" class="img-fluid d-block mx-auto w-100" />
+                        </div>
+
+                        <div class="info_box">
+                            <span>Salwar kameez design for ready to print, tunic tops ...</span>
+                            <div class="img_box">
+                                <img src="assets/image/Profile image.png" alt="" />
+                                <span>Vecton</span>
+                            </div>
+                        </div>
+
+                        <div class="icon_box">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-share-alt"></i>
+                            <i class="fas fa-plus"></i>
+                            <i class="fab fa-pinterest-p"></i>
+
+                            <span> <i class="fas fa-heart"></i> 56k</span>
+                            <span> <i class="fas fa-long-arrow-alt-down"></i> 545k</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
     </div>
 
     <!-- products sectio ends -->
