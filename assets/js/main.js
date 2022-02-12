@@ -1,8 +1,7 @@
 $(document).ready(function () {
     $(".nice").niceSelect();
 
-    // ddslick 
-    $('.options').ddslick(); 
+    
     
 
 
@@ -10,7 +9,7 @@ $(document).ready(function () {
 
 
     // owl carousel
-    $('.owl-carousel').owlCarousel({
+    $('.owl-theme').owlCarousel({
         loop:true,
         autoplay: true,
         animateOut: 'fadeOut',
@@ -29,9 +28,55 @@ $(document).ready(function () {
             }
         }
     })
+
+    $('.earning-profile-slider').owlCarousel({
+      loop:true,
+      autoplay: true,
+      margin:15,
+      nav: true,
+      items: 7,
+      responsive:{
+        0:{
+            items:2
+        },
+        500:{
+            items:3
+        },
+        700:{
+            items:4
+        },
+        1300:{
+            items:5
+        }
+    }
+    })
+    $('.downloaded_content_slider').owlCarousel({
+      loop:true,
+      autoplay: true,
+      margin:15,
+      nav: true,
+      items: 5,
+      responsive:{
+        0:{
+            items:2
+        },
+        500:{
+            items:3
+        },
+        700:{
+            items:4
+        },
+        1300:{
+            items:5
+        }
+    }
+    })
     
 });
 
+
+// ddslick 
+$('.options').ddslick(); 
 
 
 
