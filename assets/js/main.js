@@ -14,7 +14,7 @@ $(document).ready(function () {
         autoplay: true,
         animateOut: 'fadeOut',
         items: 1,
-        autoplayTimeout: 8000,
+        autoplayTimeout: 10000,
         mouseDrag: false,
         responsive:{
             0:{
@@ -50,6 +50,28 @@ $(document).ready(function () {
         }
     }
     })
+    $('.contributor-profile-slider').owlCarousel({
+      loop:true,
+      autoplay: true,
+      margin:15,
+      nav: true,
+      items: 7,
+      responsive:{
+        0:{
+            items:2
+        },
+        500:{
+            items:3
+        },
+        700:{
+            items:4
+        },
+        1300:{
+            items:5
+        }
+    }
+    })
+
     $('.downloaded_content_slider').owlCarousel({
       loop:true,
       autoplay: true,
@@ -124,7 +146,7 @@ $('.popup-with-move-anim').magnificPopup({
 
 
 // sticky searc bar
-const header = document.querySelector(".search_container");
+const header = document.querySelector(".banner_content");
 const sectionOne = document.querySelector(".banner");
 const sectionOneOptions = {
   rootMargin: "-10% 0px 0px 0px"
